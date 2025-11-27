@@ -1,0 +1,299 @@
+/* style.css */
+
+/* Reset dasar dan font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: white;
+    color: black;
+    transition: 0.3s;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+header {
+    background: #007BFF;
+    color: #fff;
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+nav span {
+    margin-right: 10px;
+}
+
+/* Form Styling (Login, Register, Add Recipe) */
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Button Styling */
+button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button#toggle-register-button,
+button#toggle-login-button {
+    background: #007BFF;
+    margin-left: 10px;
+}
+
+button#logout-button {
+    background: #007BFF;
+    margin-top: 0;
+}
+
+button#fetch-inspiration-button {
+    background: #007BFF;
+}
+
+/* Dashboard Styling */
+#api-inspiration-area {
+    margin-top: 15px;
+    padding: 15px;
+    background: #e9ecef;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Recipe List Styling */
+.recipe-item {
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe-item button {
+    background: #007BFF;
+    padding: 5px 10px;
+    margin-top: 0;
+}
+
+.recipe-item h4 {
+    margin-bottom: 5px;
+}
+
+.recipe-item p {
+    font-size: 0.9rem;
+    color: #666;
+    white-space: pre-line;
+}
+
+/* ===================== */
+/*        DARK MODE       */
+/* ===================== */
+
+/* Background & text utama */
+body.dark {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
+/* Header */
+body.dark header {
+    background: #222;
+    color: #fff;
+}
+
+/* Section (card putih) */
+body.dark section {
+    background: #2a2a2a;
+    color: #f1f1f1;
+    border-color: #444;
+}
+
+/* Input & textarea */
+body.dark .form-group input,
+body.dark .form-group textarea {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+    color: #ccc;
+}
+
+/* Buttons */
+body.dark button {
+    background: #3c6e3c;
+    color: white;
+}
+
+body.dark button#toggle-register-button,
+body.dark button#toggle-login-button,
+body.dark button#logout-button,
+body.dark button#fetch-inspiration-button {
+    background: #1e6bd6;
+}
+
+/* API Inspiration Area */
+body.dark #api-inspiration-area {
+    background: #2b2b2b;
+    border-color: #555;
+}
+
+/* Recipe List */
+body.dark .recipe-item {
+    background: #2b2b2b;
+    border-color: #555;
+}
+
+body.dark .recipe-item p {
+    color: #ccc;
+}
+
+body.dark .recipe-item button {
+    background: #1e6bd6;
+}
+
+/* Links */
+body.dark a {
+    color: #4da3ff;
+}
+
+/* ============================== */
+/* Tombol Toggle Mode Gelap Keren */
+/* ============================== */
+
+.dark-toggle-btn {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.dark-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Warna tombol saat dark */
+body.dark .dark-toggle-btn {
+    border-color: #ffce4b;
+    color: #ffce4b;
+}
+
+body.dark .dark-toggle-btn:hover {
+    background: rgba(255, 206, 75, 0.2);
+}
+
+/* ========= FOOTER ========= */
+.footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    background: #007BFF;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.footer-content {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Jarak social diperbesar */
+.footer-social {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* <— ubah jarak antar ikon */
+}
+
+.footer-social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    color: #007BFF;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    background: #ffce4b;
+    color: #000;
+    transform: scale(1.15);
+}
+
+/* Mode gelap */
+body.dark .footer {
+    background: #222;
+    color: #ffce4b;
+}
+
+body.dark .footer-social a {
+    background: #333;
+    color: #ffce4b;
+}
+
+body.dark .footer-social a:hover {
+    background: #ffce4b;
+    color: #000;
+}
