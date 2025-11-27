@@ -17,4 +17,4 @@ Bahan-Bahan:1.Ayam, 2.Tepung Serbaguna, 3.Telur
 
 Dan nanti hasil nya akan tersimpan di bawah dan datanya akan tersimpan di dalam akun yang telah di register
 
-Link Deploy:
+Link Deploy:https://my-recipe-lime.vercel.app/
